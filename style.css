@@ -1,0 +1,80 @@
+/* -------------------------------------------------------
+   Clean theme variables
+------------------------------------------------------- */
+:root{
+  --brand:#3b82f6;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --bg:#f8fafc;
+}
+
+html,body{ scroll-behavior:smooth; }
+body{ color:var(--ink); background:#fff; }
+
+/* Utilities */
+.py-6{ padding-block:4.5rem; }
+.kicker{
+  display:inline-block; text-transform:uppercase; letter-spacing:.08em;
+  font-weight:600; color:var(--brand); font-size:.85rem;
+}
+.accent{ color:var(--brand); }
+.opacity-90{ opacity:.9; }
+.object-cover{ object-fit:cover; }
+.brand-dot{
+  width:12px; height:12px; border-radius:50%;
+  background:linear-gradient(90deg, var(--brand), #22c55e);
+  display:inline-block;
+}
+.check{
+  width:14px; height:14px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #22c55e 40%, #22c55e 40%) no-repeat;
+  display:inline-block; flex:0 0 auto;
+}
+
+/* Hero */
+.section-hero{
+  background:
+    radial-gradient(700px 260px at -5% 0%, #eff6ff 30%, transparent 60%),
+    radial-gradient(700px 260px at 105% 0%, #ecfeff 30%, transparent 60%);
+  padding-block: clamp(3rem, 6vw, 6rem);
+  position:relative;
+}
+.hero-card{ border:1px solid #eee; }
+.hero-wave{
+  position:absolute; left:0; bottom:-1px; width:100%; height:120px; display:block;
+}
+.hero-wave path{ fill:#fff; }
+
+/* Feature cards */
+.feature .icon{
+  width:42px; height:42px; border-radius:12px; display:grid; place-items:center;
+  background:rgba(59,130,246,.1); color:var(--brand); font-size:1rem; margin-bottom:.75rem;
+}
+
+/* Pricing */
+.pricing-pop{ outline:2px solid rgba(59,130,246,.25); transform:translateY(-4px); }
+
+/* CTA */
+.cta{
+  background:
+    linear-gradient(rgba(15,23,42,.75), rgba(15,23,42,.7)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+/* Buttons and links */
+.btn-primary{
+  --bs-btn-color:#fff;
+  --bs-btn-bg:var(--brand);
+  --bs-btn-border-color:var(--brand);
+  --bs-btn-hover-bg:#2563eb;
+  --bs-btn-hover-border-color:#2563eb;
+}
+
+/* Footer */
+footer .link-secondary{ text-decoration:none; }
+footer .link-secondary:hover{ text-decoration:underline; }
+
+/* Responsive tweaks */
+@media (max-width: 991.98px){
+  .hero-card img{ height:240px !important; }
+}
